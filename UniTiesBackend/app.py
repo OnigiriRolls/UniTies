@@ -7,11 +7,6 @@ client = MongoClient('localhost', 27017, username='User', password='4lNukg1PfxSL
 db = client['UniStud']
 collection = db['sample_mflix']
 
-@app.route('/events', methods = ['GET'," POST"])
-def add_movie():
-    data = collection.find('movies')
-    return 'Hello World!'
-
 @app.route('/')
 def hello_world():  # put application's code here
     data = collection.find('movies')
